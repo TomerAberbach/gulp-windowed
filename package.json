@@ -1,6 +1,6 @@
 {
   "name": "gulp-windowed",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "Tomer Aberbach <tomeraberbach@gmail.com> (https://tomeraberba.ch)",
   "description": "Processes and maps files in windows/arrays of a specified size.",
   "keywords": [
@@ -35,9 +35,7 @@
   "main": "index.js",
   "scripts": {
     "test": "standard && standard-markdown README.md && mocha",
-    
     "publish:git": "git add . && git commit -a && git push --follow-tags",
-    
     "publish:patch": "npm test && npm version patch && npm publish && npm run publish:git",
     "publish:minor": "npm test && npm version minor && npm publish && npm run publish:git",
     "publish:major": "npm test &&npm version major && npm publish && npm run publish:git"
