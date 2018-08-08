@@ -35,7 +35,7 @@
   "main": "index.js",
   "scripts": {
     "test": "standard && standard-markdown README.md && mocha",
-    "publish:git": "git add . && git commit -a && git push --follow-tags",
+    "publish:git": "git add . && git push --follow-tags",
     "publish:patch": "npm test && npm version patch -m \"%s\" && npm publish && npm run publish:git",
     "publish:minor": "npm test && npm version minor -m \"%s\" && npm publish && npm run publish:git",
     "publish:major": "npm test && npm version major -m \"%s\" && npm publish && npm run publish:git"
