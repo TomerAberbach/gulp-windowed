@@ -24,7 +24,7 @@ const array = (n, cb) => {
     asyncDone(done => {
       const result = cb(files, i, done)
 
-      if (result instanceof File || (Array.isArray(result) && result.every(item => item instanceof File)) || isStream.readable(result)) {
+      if (File.isVinyl(result) || (Array.isArray(result) && result.every(File.isVinyl)) || isStream.readable(result)) {
         done(null, result)
       } else {
         return result
@@ -36,15 +36,17 @@ const array = (n, cb) => {
       } else {
         if (isStream.readable(result)) {
           result
-            .on('data', file => this.push(file))
+            .on('data', file => {
+              if (File.isVinyl(file)) {
+                this.push(file)
+              }
+            })
             .on('end', done)
         } else {
-          if (Array.isArray(result) && result.every(item => item instanceof File)) {
+          if (Array.isArray(result) && result.every(File.isVinyl)) {
             result.forEach(item => this.push(item))
-            done()
-          } else if (result instanceof File) {
+          } else if (File.isVinyl(result)) {
             this.push(result)
-            done()
           }
 
           done()
