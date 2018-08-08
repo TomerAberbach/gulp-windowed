@@ -8,7 +8,7 @@ const intoStream = require('into-stream')
 
 const PLUGIN_NAME = 'gulp-windowed'
 
-module.exports = (n, cb) => {
+const array = (n, cb) => {
   if (!Number.isInteger(n) || n <= 0) {
     throw new PluginError(PLUGIN_NAME, 'Window size must be a positive integer!')
   }
@@ -22,7 +22,7 @@ module.exports = (n, cb) => {
 
   function f (done) {
     asyncDone(done => {
-      const result = cb(intoStream.obj(files), i, done)
+      const result = cb(files, i, done)
 
       if (result instanceof File || (Array.isArray(result) && result.every(item => item instanceof File)) || isStream.readable(result)) {
         done(null, result)
@@ -81,3 +81,6 @@ module.exports = (n, cb) => {
     }
   })
 }
+
+module.exports = (n, cb) => array(n, typeof cb === 'function' ? (files, i, done) => cb(intoStream.obj(files), i, done) : undefined)
+module.exports.array = array
