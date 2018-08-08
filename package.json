@@ -36,9 +36,9 @@
   "scripts": {
     "test": "standard && standard-markdown README.md && mocha",
     "push": "npm test && git push --follow-tags",
-    "deploy:patch": "npm run push && npm version patch && npm publish",
-    "deploy:minor": "npm run push && npm version minor && npm publish",
-    "deploy:major": "npm run push && npm version major && npm publish"
+    "deploy:patch": "npm version patch && git add package.json package-lock.json && git commit -m \"patch\" && npm run push && npm publish",
+    "deploy:minor": "npm version minor && git add package.json package-lock.json && git commit -m \"minor\" && npm run push && npm publish",
+    "deploy:major": "npm version major && git add package.json package-lock.json && git commit -m \"major\" && npm run push && npm publish"
   },
   "dependencies": {
     "async-done": "^1.3.1",
