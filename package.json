@@ -38,7 +38,7 @@
     "publish:git": "git add . && git commit -a && git push --follow-tags",
     "publish:patch": "npm test && npm version patch && npm publish && npm run publish:git",
     "publish:minor": "npm test && npm version minor && npm publish && npm run publish:git",
-    "publish:major": "npm test &&npm version major && npm publish && npm run publish:git"
+    "publish:major": "npm test && npm version major && npm publish && npm run publish:git"
   },
   "dependencies": {
     "async-done": "^1.3.1",
