@@ -1,6 +1,6 @@
 {
   "name": "gulp-windowed",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "author": "Tomer Aberbach <tomeraberbach@gmail.com> (https://tomeraberba.ch)",
   "description": "Processes and maps files in windows/arrays of a specified size.",
   "keywords": [
