@@ -12,7 +12,7 @@ $ npm i gulp-windowed --save
 
 ## Usage
 
-This example concatenates groups of 5 markdown files. If `src/posts` contained files `post0.md` through `post99.md` then the next pipe would receive a stream containing `page0.md` through `page9.md` where `page0.md` is the concatenation of `post0.md` through `post4.md`. The ordering is guaranteed by the use of [gulp-sort](https://www.npmjs.com/package/gulp-sort).
+This example concatenates groups of 5 markdown files. If `src/posts` contained files `post0.md` through `post99.md` then the next pipe would receive a stream containing `page0.md` through `page9.md` where `page19.md` is the concatenation of `post0.md` through `post4.md`. The ordering is guaranteed by the use of [gulp-sort](https://www.npmjs.com/package/gulp-sort).
 
 ```js
 const gulp = require('gulp')
@@ -32,7 +32,7 @@ gulp.task('default', () =>
 
 Here it is used to split groups of files into different folders.
 
-```
+```js
 const gulp = require('gulp')
 const windowed = require('gulp-windowed')
 const rename = require('gulp-rename')
@@ -73,12 +73,12 @@ Calls `cb` with a readable object stream containing `n` [vinyl](https://www.npmj
 
 Parameters:
  * `n` : `int` - A number of `File` objects to include per window. Must be a positive integer.
- * `cb` : `(files, i, done) -> File | Array<File> | Promise<File | Array<File> | *> | Observable<File | Array<File> | *> | ChildProcess | ReadableObjectStream<File> | undefined` - A callback which either calls `done` or returns a `File` object, an array of `File` objects, or an asynchronous operation in some returnable format (see possible `cb` return types and [async-done](https://www.npmjs.com/package/async-done)). If an asynchronous operation is returned if will be resolved. If the result of `cb`, through calling `done` or returning an asynchronous operation, is a `File` object or an array of `File` objects then they will be written to the duplex object stream returned from `windowed`.
+ * `cb` : `(files, i, done) -> File | Array<File> | Promise<File | Array<File> | *> | Observable<File | Array<File> | *> | ChildProcess | ReadableObjectStream<File> | undefined` - A callback which either calls `done` or returns a `File` object, an array of `File` objects, or an asynchronous operation in some returnable format (see possible `cb` return types and [async-done](https://www.npmjs.com/package/async-done)). If an asynchronous operation is returned it will be resolved. If the result of `cb`, through calling `done` or returning an asynchronous operation, is a `File` object or an array of `File` objects then they will be written to the duplex object stream returned from `windowed`.
    * `files` : `ReadableObjectStream<File>` - A readable object stream containing up to `n` [vinyl](https://www.npmjs.com/package/vinyl) `File` objects (see above from why not exactly `n`).
    * `i` : `int` - The current zero-based window number (i.e. the number of times `cb` has been called minus one).
    * `done` : `(err, result) -> undefined` - Call `done(new Error(...))` for error or `done(null, result)` for success when performing asynchronous operations in non-returnable format or when performing strictly synchronous operations. This method does not need to be and should not be called if a valid value of the types mentioned above is returned from `cb`.
 
-## Pairs well with
+## Pairs Well With
 
  * [gulp-sort](https://www.npmjs.com/package/gulp-sort)
  * [gulp-concat](https://www.npmjs.com/package/gulp-concat)
@@ -89,7 +89,7 @@ Parameters:
 
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/TomerADev/gulp-windowed/issues/new).
 
-## Running tests
+## Running Tests
 
 Install dev dependencies:
 
