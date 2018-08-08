@@ -12,7 +12,7 @@ $ npm i gulp-windowed --save
 
 ## Usage
 
-This example concatenates groups of 5 markdown files. If `src/posts` contained files `post0.md` through `post99.md` then the next pipe would receive a stream containing `page0.md` through `page9.md` where `page19.md` is the concatenation of `post0.md` through `post4.md`. The ordering is guaranteed by the use of [gulp-sort](https://www.npmjs.com/package/gulp-sort).
+This example concatenates groups of 5 markdown files. If `src/posts` contained files `post0.md` through `post99.md` then the next pipe would receive a stream containing `page0.md` through `page19.md` where `page0.md` is the concatenation of `post0.md` through `post4.md`. The ordering is guaranteed by the use of [gulp-sort](https://www.npmjs.com/package/gulp-sort).
 
 ```js
 const gulp = require('gulp')
