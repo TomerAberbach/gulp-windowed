@@ -1,4 +1,6 @@
-# Gulp Windowed [![NPM version](https://img.shields.io/npm/v/gulp-windowed.svg)](https://www.npmjs.com/package/gulp-windowed) [![Build Status](https://img.shields.io/travis/TomerADev/gulp-windowed.svg)](https://travis-ci.org/TomerADev/gulp-windowed) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FTomerADev%2Fgulp-windowed.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FTomerADev%2Fgulp-windowed?ref=badge_shield) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+# Gulp Windowed
+
+[![NPM version](https://img.shields.io/npm/v/gulp-windowed.svg)](https://www.npmjs.com/package/gulp-windowed) [![Build Status](https://img.shields.io/travis/TomerADev/gulp-windowed.svg)](https://travis-ci.org/TomerADev/gulp-windowed) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 > Processes and maps files in windows/arrays of a specified size.
 
