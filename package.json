@@ -20,13 +20,13 @@
     "gulp",
     "gulpfriendly"
   ],
-  "homepage": "https://github.com/TomerADev/gulp-windowed",
+  "homepage": "https://github.com/TomerAberbach/gulp-windowed",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TomerADev/gulp-windowed.git"
+    "url": "git+https://github.com/TomerAberbach/gulp-windowed.git"
   },
   "bugs": {
-    "url": "https://github.com/TomerADev/gulp-windowed/issues"
+    "url": "https://github.com/TomerAberbach/gulp-windowed/issues"
   },
   "license": "MIT",
   "files": [

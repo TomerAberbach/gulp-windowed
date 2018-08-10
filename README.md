@@ -1,6 +1,6 @@
 # Gulp Windowed
 
-[![NPM version](https://img.shields.io/npm/v/gulp-windowed.svg)](https://www.npmjs.com/package/gulp-windowed) [![Build Status](https://img.shields.io/travis/TomerADev/gulp-windowed.svg)](https://travis-ci.org/TomerADev/gulp-windowed) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM version](https://img.shields.io/npm/v/gulp-windowed.svg)](https://www.npmjs.com/package/gulp-windowed) [![Build Status](https://img.shields.io/travis/TomerAberbach/gulp-windowed.svg)](https://travis-ci.org/TomerAberbach/gulp-windowed) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 > Processes and maps files in windows/arrays of a specified size.
 
@@ -91,7 +91,7 @@ Parameters:
 
 ## Contributing
 
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/TomerADev/gulp-windowed/issues/new).
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/TomerAberbach/gulp-windowed/issues/new).
 
 ## Running Tests
 
@@ -105,12 +105,12 @@ $ npm i -d && npm test
 
 **Tomer Aberbach**
 
-* [Github](https://github.com/TomerADev)
+* [Github](https://github.com/TomerAberbach)
 * [NPM](https://www.npmjs.com/~tomeraberbach)
 * [LinkedIn](https://www.linkedin.com/in/tomer-a)
 * [Website](https://tomeraberba.ch)
 
 ## License
 
-Copyright © 2018 [Tomer Aberbach](https://github.com/TomerADev)
-Released under the [MIT license](https://github.com/TomerADev/gulp-windowed/blob/master/LICENSE).
+Copyright © 2018 [Tomer Aberbach](https://github.com/TomerAberbach)
+Released under the [MIT license](https://github.com/TomerAberbach/gulp-windowed/blob/master/LICENSE).
