@@ -26,8 +26,8 @@
     "url": "https://github.com/TomerAberbach/gulp-windowed/issues"
   },
   "license": "MIT",
-  "main": "gulp-windowed.js",
-  "module": "gulp-windowed.mjs",
+  "main": "lib/gulp-windowed.js",
+  "module": "lib/gulp-windowed.mjs",
   "files": [
     "lib"
   ],
