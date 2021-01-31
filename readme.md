@@ -105,4 +105,4 @@ Parameters:
 
 ## License
 
-[MIT](https://github.com/TomerAberbach/gulp-windowed/blob/master/license) © [Tomer Aberbach](https://github.com/TomerAberbach)
+[MIT](https://github.com/TomerAberbach/gulp-windowed/blob/main/license) © [Tomer Aberbach](https://github.com/TomerAberbach)
