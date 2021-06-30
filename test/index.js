@@ -3,7 +3,7 @@ import streamAssert from 'stream-assert'
 import getStream from 'get-stream'
 import File from 'vinyl'
 import through from 'through2'
-import { windowed } from '../lib/gulp-windowed'
+import { windowed } from '../src/index.js'
 
 test(`throws an error when n is not a positive integer`, t => {
   for (const value of [`spaghetti`, 0, undefined, 2.2]) {

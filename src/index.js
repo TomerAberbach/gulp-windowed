@@ -1,3 +1,4 @@
+/* eslint-disable no-invalid-this */
 import File from 'vinyl'
 import PluginError from 'plugin-error'
 import asyncDone from 'async-done'
@@ -36,29 +37,29 @@ export const arrayWindowed = (n, cb) => {
         } else {
           return result
         }
+
+        return undefined
       },
       (err, result) => {
         if (err) {
           this.emit(`error`, new PluginError(PLUGIN_NAME, err.message))
           done()
+        } else if (isStream.readable(result)) {
+          result
+            .on(`data`, file => {
+              if (File.isVinyl(file)) {
+                this.push(file)
+              }
+            })
+            .on(`end`, done)
         } else {
-          if (isStream.readable(result)) {
-            result
-              .on(`data`, file => {
-                if (File.isVinyl(file)) {
-                  this.push(file)
-                }
-              })
-              .on(`end`, done)
-          } else {
-            if (Array.isArray(result) && result.every(File.isVinyl)) {
-              result.forEach(item => this.push(item))
-            } else if (File.isVinyl(result)) {
-              this.push(result)
-            }
-
-            done()
+          if (Array.isArray(result) && result.every(File.isVinyl)) {
+            result.forEach(item => this.push(item))
+          } else if (File.isVinyl(result)) {
+            this.push(result)
           }
+
+          done()
         }
       }
     )
